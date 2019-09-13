@@ -1,0 +1,15 @@
+package com.assignemnt.constants;
+
+public class Definitions {
+	
+	public static long Page_Load = 10;
+	public static long implicit_wait =20;
+	
+	public static String chrome_driver = "";
+	public static String chrome_path = "";
+	
+	public static String firefox_driver = "webdriver.chrome.driver";
+	public static String firefox_path = "";
+ 	
+
+}

@@ -1,0 +1,59 @@
+package com.assignmenet.testcases;
+
+import org.junit.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.assignment.basetest.TestBase;
+import com.assignment.pages.SeleniumPage;
+
+public class SeleniumPage_Test extends TestBase{
+	
+	
+	javascriptexecutor js;
+	
+	public SeleniumPage_Test()
+	{
+		super();
+	}
+
+	SeleniumPage sp;
+	
+	@BeforeClass
+	public void getsetup()
+	{
+		initialization();
+		sp = new SeleniumPage();
+	}
+	
+	@Test (priority=0)
+	public void Selenium_Page_Title_Test()
+	{
+		String title = sp.Selenium_Page_Title_Feature();
+		System.out.println(title);
+	}
+	
+	@Test (priority=1)
+	public void Selenium_Page_External_Link_Test()
+	{
+		sp.External_Link_Feature();
+	}
+	
+	@Test (priority=2)
+	public void Selenium_Page_Oxygen_Link_Test()
+	{
+		sp.Oxygen_Click_Feature();
+	}
+	
+	@Test (priority=3)
+	public void Selenium_Page_Search_Data_Test()
+	{
+		sp.Search_Data_Feature(prop.getProperty("search"));
+	}
+	
+	@AfterClass
+	public void teardown()
+	{
+		driver.close();
+	}
+}

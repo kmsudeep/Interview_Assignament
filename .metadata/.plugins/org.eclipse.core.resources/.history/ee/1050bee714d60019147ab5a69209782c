@@ -1,0 +1,32 @@
+package com.assignmenet.testcases;
+
+import org.testng.annotations.BeforeClass;
+
+import com.assignment.basetest.TestBase;
+import com.assignment.pages.SeleniumPage;
+
+public class SeleniumPage_Test extends TestBase{
+	
+	
+	SeleniumPage sp;
+	
+	public SeleniumPage_Test()
+	{
+		super();
+	}
+
+	
+	@BeforeClass
+	public void getsetup()
+	{
+		initialization();
+		sp = new SeleniumPage();
+	}
+	
+	@Test
+	public void Selenium_Page_Title_Test()
+	{
+		String title = sp.Selenium_Page_Title_Feature();
+		Systemm.out.println(title);
+	}
+}

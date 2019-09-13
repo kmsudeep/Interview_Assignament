@@ -1,0 +1,8 @@
+package com.assignemnt.constants;
+
+public class Definitions {
+	
+	public static long Page_Load =10;
+	
+
+}

@@ -1,0 +1,17 @@
+package com.assignment.pages;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.assignment.basetest.TestBase;
+
+public class SeleniumPage extends TestBase{
+	
+	@FindBy()
+	WebElement 
+	public SeleniumPage()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+
+}

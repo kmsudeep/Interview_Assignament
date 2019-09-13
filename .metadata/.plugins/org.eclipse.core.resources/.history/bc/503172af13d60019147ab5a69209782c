@@ -1,0 +1,43 @@
+package com.assignment.pages;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.assignment.basetest.TestBase;
+
+public class SeleniumPage extends TestBase{
+	
+	
+	
+	
+	@FindBy(id="External_links")
+	WebElement external_links;
+	
+	
+	
+	public SeleniumPage()
+	{
+		PageFactory.initElements(driver, this);
+	}
+	
+	public String Selenium_Page_Title_Feature()
+	{
+		return driver.getTitle();
+	}
+	
+	public void External_Link_Feature()
+	{
+		if(external_links.isDisplayed())
+		{
+			System.out.println("External_Link is Displayed in the WebPage");
+		}
+		else
+		{
+			System.out.println("External_Link is Not - Displayed in the WebPage");
+		}
+	}
+	
+
+}

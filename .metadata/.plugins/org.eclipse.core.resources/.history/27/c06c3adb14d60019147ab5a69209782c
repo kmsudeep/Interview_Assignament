@@ -1,0 +1,25 @@
+package com.assignmenet.testcases;
+
+import org.testng.annotations.BeforeClass;
+
+import com.assignment.basetest.TestBase;
+import com.assignment.pages.SeleniumPage;
+
+public class SeleniumPage_Test extends TestBase{
+	
+	
+	SeleniumPage sp;
+	
+	public SeleniumPage_Test()
+	{
+		super();
+	}
+
+	
+	@BeforeClass
+	public void getsetup()
+	{
+		initialization();
+		sp = new SeleniumPage();
+	}
+}
